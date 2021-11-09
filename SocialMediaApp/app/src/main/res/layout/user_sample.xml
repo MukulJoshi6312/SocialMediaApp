@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:diagonal="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfile"
+        android:layout_width="@dimen/_60mdp"
+        android:layout_height="@dimen/_60mdp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="@dimen/_2mdp"
+        android:src="@drawable/aaaa"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="@dimen/_5mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Mukul Joshi"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14font_mdp"
+        app:layout_constraintBottom_toTopOf="@+id/profession"
+        app:layout_constraintStart_toEndOf="@+id/userProfile"
+        app:layout_constraintTop_toTopOf="@+id/userProfile"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/userProfile"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/follow_button"
+        android:paddingEnd="@dimen/_8mdp"
+        android:paddingStart="@dimen/_8mdp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_24font_mdp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/follow_button"
+        android:text="Follow"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/userProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/userProfile" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

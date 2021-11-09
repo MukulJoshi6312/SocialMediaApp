@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HomeFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="@string/discover"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_24font_mdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/userProfile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/userProfile" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfile"
+                android:layout_width="@dimen/_40mdp"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:layout_marginEnd="@dimen/_16mdp"
+                android:padding="@dimen/_2mdp"
+                android:src="@drawable/picture"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/status"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/background_image"
+                app:layout_constraintBottom_toBottomOf="@+id/userProfile"
+                app:layout_constraintEnd_toEndOf="@+id/userProfile"
+                app:layout_constraintStart_toStartOf="@+id/userProfile"
+                app:layout_constraintTop_toTopOf="@+id/userProfile"
+                app:layout_constraintVertical_bias="0.115" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_2mdp"
+                android:background="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="@+id/horizontalScrollView"
+                app:layout_constraintStart_toStartOf="@+id/horizontalScrollView"
+                app:layout_constraintTop_toBottomOf="@+id/status" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_16mdp"
+                android:fillViewport="true"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/story"
+                            android:layout_width="@dimen/_130mdp"
+                            android:layout_height="@dimen/_85mdp"
+                            android:layout_marginStart="16dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/sotry"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:riv_border_color="#333333"
+                            app:riv_border_width="1dip"
+                            app:riv_corner_radius="10dip"
+                            app:riv_mutate_background="true"
+                            app:riv_oval="false" />
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="@id/story"
+                            app:layout_constraintEnd_toEndOf="@id/story"
+                            app:layout_constraintStart_toStartOf="@id/story"
+                            app:layout_constraintTop_toTopOf="@id/story" />
+
+                        <View
+                            android:id="@+id/view5"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/back_circule"
+                            app:layout_constraintBottom_toBottomOf="@+id/add_story"
+                            app:layout_constraintEnd_toEndOf="@+id/add_story"
+                            app:layout_constraintStart_toStartOf="@+id/add_story"
+                            app:layout_constraintTop_toTopOf="@+id/add_story" />
+
+                        <ImageView
+                            android:id="@+id/add_story"
+                            android:layout_width="@dimen/_30mdp"
+                            android:layout_height="@dimen/_30mdp"
+                            android:src="@drawable/ic_plus"
+                            app:layout_constraintBottom_toBottomOf="@+id/story"
+                            app:layout_constraintEnd_toEndOf="@+id/story"
+                            app:layout_constraintStart_toStartOf="@id/story"
+                            app:layout_constraintTop_toTopOf="@+id/story"
+                            app:layout_constraintVertical_bias="0.29000002" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="Add Story"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14font_mdp"
+                            app:layout_constraintEnd_toEndOf="@+id/view5"
+                            app:layout_constraintStart_toStartOf="@+id/view5"
+                            app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/storyRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_16mdp"
+
+                         />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_1mdp"
+                android:layout_marginTop="8dp"
+                android:background="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/dashboard_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_layout="@layout/demo_post"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
